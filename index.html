@@ -2,26 +2,23 @@
 
 <!-- 
    
-   HTML5 - Scripts Assíncronos
+   HTML5 - Async Scripts
 
    Developed by Zeno Rocha - http://zenorocha.com 
-   Fork me on Github - https://github.com/zenorocha/HTML5-Tutorial-Template
+   Fork me on Github - https://github.com/zenorocha/HTML5-Script
    
 -->
 
-<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]>    <html class="no-js ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="pt-BR"> <!--<![endif]-->
+<html lang="pt-BR">
 <head>
+
   <meta charset="utf-8">
 
-  <title>HTML5 - Scripts Assíncronos</title>
+  <title>HTML5 - Async Scripts</title>
   
   <meta name="author" content="Zeno Rocha">
-  <meta name="description" content="Template para os tutoriais de HTML5">
+  <meta name="description" content="Demonstração sobre o funcionamento do novo atributo async na tag <script> do HTML5.">
   
-  <link rel="author" href="humans.txt" />
   <link rel="shortcut icon" href="favicon.ico">
 
   <link rel="stylesheet" href="css/style.css">
@@ -41,8 +38,8 @@
 	        
 	    <section id="descricao">
 	    	<h3>atributos async e defer</h3>
-			<p>Scripts tradicionais bloqueiam o parser do DOM, bloqueando o resto da página de ser renderizada enquanto o script não tiver sido baixado e rodado. Scripts utilizando a propriedade async do HTML5 desbloqueiam o resto da página para que então o carregamento possa continuar mesmo enquanto o script é baixado.</p>			
-			<button onclick="run()">▶ Executar teste</button>
+			<p>Scripts tradicionais bloqueiam o parser do DOM, impedindo a renderização do resto da página enquanto o download e execução dos scripts estiverem em andamento. Utilizando a propriedade async do HTML5 esse bloqueio no resto da página não é causado, assim a renderização pode continuar mesmo enquanto os scripts são baixados.</p>
+			<button onclick="run()">▶ Executar teste</button> Aperte CTRL+SHIFT+R para recarregar com o cache vazio.
 	    </section>
 
 	    <section id="categoria"></section>
@@ -52,12 +49,12 @@
     <section id="tutorial">
 	    
 	    <section id="coluna-esquerda">
-			<h4>Sem - HTML5 Async</h4>
+			<h4>Sem o atributo async</h4>
 			<iframe id="frame1" src="vazio.html" frameborder="0"></iframe>
 		</section>
 	    
 	    <section id="coluna-direita">
-			<h4>Com - HTML5 Async</h4>
+			<h4>Com o atributo async</h4>
 			<iframe id="frame2" src="vazio.html" frameborder="0"></iframe>
 		</section>
 	    
@@ -76,7 +73,7 @@
 		
     </footer>
     
-    <a target="_blank" href="https://github.com/zenorocha/HTML5-Tutorial-Template">
+    <a target="_blank" href="https://github.com/zenorocha/HTML5-Script">
     	<img style="position: absolute; top: 0; right: 0; border: 0;" src="https://d3nwyuy0nl342s.cloudfront.net/img/7afbc8b248c68eb468279e8c17986ad46549fb71/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub">
 	</a>
     
@@ -90,7 +87,7 @@
 	</script>
 
   <script>
-    var _gaq=[["_setAccount","UA-4114546-18"],["_trackPageview"]]; // Change UA-XXXXX-X to be your site's ID 
+    var _gaq=[["_setAccount","UA-4114546-26"],["_trackPageview"]];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
     g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
     s.parentNode.insertBefore(g,s)}(document,"script"));
